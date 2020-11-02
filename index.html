@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Mickey Mouse RPS</title>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <main>
+    <section class="player" id="player-one">
+      <div id="p1-input">
+        <h2 class="player-name">Player 1</h2>
+        <label for="p1">Type "Rock", "Paper", or "Scissors"!</label><br>
+        <input type="password" id="p1" name="p1"><br>
+        <span class="flip-warning">(or "Flip" for a surprise!)</span>
+      </div>
+      <br><br>
+      <img class="hand" id="left-hand" src="images/rock-left.png">
+    </section>
+
+    <section id="results">
+      <select name="1p-2p" id="1p-2p">
+        <option value="1-player">1 Player</option>
+        <option value="2-player">2 Players</option>
+      </select>
+      <button id="players-button" onclick="gameMode()">Go!</button>
+      <br>
+      <button id="shoot-button" onclick="rockPaperScissors()">Shoot!</button>
+      <section id="display-result"></section>
+    </section>
+
+    <section class="player" id="player-two">
+      <div class="disappear" id="p2-input">
+        <h2 class="player-name">Player 2</h2>
+        <label for="p2">Type "Rock", "Paper", or "Scissors"!</label><br>
+        <input type="password" id="p2" name="p2"><br>
+        <span class="flip-warning">(or "Flip" for a surprise!)</span>
+      </div>
+      <br><br>
+      <img class="hand" id="right-hand" src="images/rock-right.png">
+    </section>
+  </main>
+</body>
+
 </html>
